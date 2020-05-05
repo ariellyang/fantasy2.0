@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>夢幻立委</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <!--    <div class="wrap">-->
+    <div class="title">
+        <div class="title_pic"></div>
+    </div>
+
+    <!--
+    <script>
+        var click1 = 0; //媒體
+        var click2 = 0; //教育
+        var click3 = 0; //同儕
+        var click4 = 0; //社群
+        var click5 = 0; //家庭
+
+        function onclick1(n) {
+            click1 += n;
+
+            chart.data.datasets[0].data[0] += n;
+            chart.update();
+        }
+
+        function onclick2(m) {
+
+            click2 += m;
+
+            chart.data.datasets[0].data[1] += m;
+            chart.update();
+        }
+
+        function onclick3(k) {
+
+            click3 += k;
+
+            chart.data.datasets[0].data[2] += k;
+            chart.update();
+        }
+
+        function onclick4(i) {
+
+            click4 += i;
+
+            chart.data.datasets[0].data[3] += i;
+            chart.update();
+        }
+
+        function onclick5(o) {
+
+            click5 += o;
+
+            chart.data.datasets[0].data[4] += o;
+            chart.update();
+        }
+
+    </script>
+-->
+
+    <div class="all_question">
+        <!--       媒體1-->
+        <div class="question_area 1">
+            <div class="question_title">
+                <img src="pic/question/1.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q1.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a">
+                    <input type="button" onclick="setValue1(1, 4)" group="1" style="background-image: url(pic/ans/1a_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+                <div class="b 1b ">
+                    <input type="button" onclick="setValue1(1, 1)" group="1" style="background-image: url(pic/ans/1b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c">
+                    <input type="button" onclick="setValue1(1, 3)" group="1" style="background-image: url(pic/ans/1c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+                <div class="d 1d">
+                    <input type="button" onclick="setValue1(1, 2)" group="1" style="background-image: url(pic/ans/1d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--教育1-->
+        <div class="question_area 2">
+            <div class="question_title"><img src="pic/question/2.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q2.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 2a"> <input type="button" onclick="setValue2(1, 4)" group="2" style="background-image: url(pic/ans/2a_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 2b"> <input type="button" onclick="setValue2(1, 1)" group="2" style="background-image: url(pic/ans/2b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 2c"> <input type="button" onclick="setValue2(1, 3)" group="2" style="background-image: url(pic/ans/2c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 2d"> <input type="button" onclick="setValue2(1, 2)" group="2" style="background-image: url(pic/ans/2d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--同儕1-->
+        <div class="question_area 3">
+            <div class="question_title"><img src="pic/question/3.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q3.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue3(1, 1)" group="3" style="background-image: url(pic/ans/3a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue3(1, 3)" group="3" style="background-image: url(pic/ans/3b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue3(1, 2)" group="3" style="background-image: url(pic/ans/3c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue3(1, 4)" group="3" style="background-image: url(pic/ans/3d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--社群1-->
+        <div class="question_area 4">
+            <div class="question_title"><img src="pic/question/4.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q4.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue4(1, 1)" group="4" style="background-image: url(pic/ans/4a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue4(1, 3)" group="4" style="background-image: url(pic/ans/4b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue4(1, 4)" group="4" style="background-image: url(pic/ans/4c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue4(1, 2)" group="4" style="background-image: url(pic/ans/4d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--家庭1-->
+        <div class="question_area 5">
+            <div class="question_title"><img src="pic/question/5.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q5.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue5(1, 1)" group="5" style="background-image: url(pic/ans/5a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue5(1, 3)" group="5" style="background-image: url(pic/ans/5b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue5(1, 4)" group="5" style="background-image: url(pic/ans/5c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue5(1, 2)" group="5" style="background-image: url(pic/ans/5d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--媒體2-->
+        <div class="question_area 6">
+            <div class="question_title"><img src="pic/question/6.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q6.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue1(2, 3)" group="1" style="background-image: url(pic/ans/6a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue1(2, 1)" group="1" style="background-image: url(pic/ans/6b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue1(2, 2)" group="1" style="background-image: url(pic/ans/6c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue1(2, 4)" group="1" style="background-image: url(pic/ans/6d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--教育2-->
+        <div class="question_area 7">
+            <div class="question_title"><img src="pic/question/7.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q7.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue2(2, 2)" group="2" style="background-image: url(pic/ans/7a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue2(2, 1)" group="2" style="background-image: url(pic/ans/7b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue2(2, 4)" group="2" style="background-image: url(pic/ans/7c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue2(2, 3)" group="2" style="background-image: url(pic/ans/7d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--同儕2-->
+        <div class="question_area 8">
+            <div class="question_title"><img src="pic/question/8.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q8.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue3(2, 1)" group="3" style="background-image: url(pic/ans/8a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue3(2, 3)" group="3" style="background-image: url(pic/ans/8b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue3(2, 2)" group="3" style="background-image: url(pic/ans/8c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue3(2, 4)" group="3" style="background-image: url(pic/ans/8d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--社群2-->
+        <div class="question_area 9">
+            <div class="question_title"><img src="pic/question/9.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q9.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue4(2, 1)" group="4" style="background-image: url(pic/ans/9a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue4(2, 2)" group="4" style="background-image: url(pic/ans/9b_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue4(2, 3)" group="4" style="background-image: url(pic/ans/9c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue4(2, 4)" group="4" style="background-image: url(pic/ans/9d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--家庭2-->
+        <div class="question_area 10">
+            <div class="question_title"><img src="pic/question/10.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q10.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue5(2, 2)" group="5" style="background-image: url(pic/ans/10a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue5(2, 3)" group="5" style="background-image: url(pic/ans/10b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue5(2, 1)" group="5" style="background-image: url(pic/ans/10c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue5(2, 4)" group="5" style="background-image: url(pic/ans/10d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--媒體3-->
+        <div class="question_area 11">
+            <div class="question_title"><img src="pic/question/11.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q11.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue1(3, 1)" group="1" style="background-image: url(pic/ans/11a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue1(3, 3)" group="1" style="background-image: url(pic/ans/11b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue1(3, 2)" group="1" style="background-image: url(pic/ans/11c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue1(3, 4)" group="1" style="background-image: url(pic/ans/11d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--教育3-->
+        <div class="question_area 12">
+            <div class="question_title"><img src="pic/question/12.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q12.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue2(3, 2)" group="2" style="background-image: url(pic/ans/12a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue2(3, 3)" group="2" style="background-image: url(pic/ans/12b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue2(3, 1)" group="2" style="background-image: url(pic/ans/12c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue2(3, 4)" group="2" style="background-image: url(pic/ans/12d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--同儕3-->
+        <div class="question_area 13">
+            <div class="question_title"><img src="pic/question/13.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q13.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue3(3, 2)" group="3" style="background-image: url(pic/ans/13a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue3(3, 3)" group="3" style="background-image: url(pic/ans/13b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue3(3, 1)" group="3" style="background-image: url(pic/ans/13c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue3(3, 4)" group="3" style="background-image: url(pic/ans/13d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+            <!--社群3-->
+
+        </div>
+        <div class="question_area 14">
+            <div class="question_title"><img src="pic/question/14.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q14.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue4(3, 2)" group="4" style="background-image: url(pic/ans/14a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue4(3, 3)" group="4" style="background-image: url(pic/ans/14b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue4(3, 1)" group="4" style="background-image: url(pic/ans/14c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue4(3, 4)" group="4" style="background-image: url(pic/ans/14d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--家庭3-->
+
+        <div class="question_area 15">
+            <div class="question_title"><img src="pic/question/15.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q15.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue5(3, 2)" group="5" style="background-image: url(pic/ans/15a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue5(3, 1)" group="5" style="background-image: url(pic/ans/15b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue5(3, 3)" group="5" style="background-image: url(pic/ans/15c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue5(3, 4)" group="5" style="background-image: url(pic/ans/15d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--媒體4-->
+        <div class="question_area 16">
+            <div class="question_title"><img src="pic/question/16.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q16.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue1(4, 3)" group="1" style="background-image: url(pic/ans/16a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue1(4, 1)" group="1" style="background-image: url(pic/ans/16b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue1(4, 2)" group="1" style="background-image: url(pic/ans/16c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue1(4, 4)" group="1" style="background-image: url(pic/ans/16d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--教育4-->
+        <div class="question_area 17">
+            <div class="question_title"><img src="pic/question/17.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q17.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue2(4, 1)" group="2" style="background-image: url(pic/ans/17a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue2(4, 3)" group="2" style="background-image: url(pic/ans/17b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue2(4, 4)" group="2" style="background-image: url(pic/ans/17c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue2(4, 2)" group="2" style="background-image: url(pic/ans/17d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--同儕4-->
+        <div class="question_area 18">
+            <div class="question_title"><img src="pic/question/18.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q18.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue3(4, 2)" group="3" style="background-image: url(pic/ans/18a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue3(4, 1)" group="3" style="background-image: url(pic/ans/18b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue3(4, 4)" group="3" style="background-image: url(pic/ans/18c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue3(4, 3)" group="3" style="background-image: url(pic/ans/18d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+        <!--社群4-->
+        <div class="question_area 19">
+            <div class="question_title"><img src="pic/question/19.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q19.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue4(4, 3)" group="4" style="background-image: url(pic/ans/19a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat; background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue4(4, 2)" group="4" style="background-image: url(pic/ans/19b_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue4(4, 1)" group="4" style="background-image: url(pic/ans/19c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue4(4, 4)" group="4" style="background-image: url(pic/ans/19d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="pre_que">
+                    <input type="button" style="background-image: url(pic/others/pre.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+                <div class="next_que">
+                    <input type="button" style="background-image: url(pic/others/next.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+
+        <!--家庭4-->
+        <div class="question_area 20">
+            <div class="question_title"><img src="pic/question/20.png" alt=""></div>
+            <div class="question_pic"><img src="pic/illustrate/q20.png" width="360px" height="360px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onclick="setValue5(4, 2)" group="5" style="background-image: url(pic/ans/20a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onclick="setValue5(4, 4)" group="5" style="background-image: url(pic/ans/20b_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onclick="setValue5(4, 1)" group="5" style="background-image: url(pic/ans/20c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onclick="setValue5(4, 3)" group="5" style="background-image: url(pic/ans/20d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+            <div class="prenext_btn">
+                <div class="send">
+                    <input type="button" onclick="cal()" style="background-image: url(pic/others/send.png);width: 171px;height: 56px; border: none; background-color: transparent;background-repeat: no-repeat;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 改 $(window).height() = 100vh -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".pre_que").click(function() {
+                $('html, body').animate({
+                    scrollTop: ($(window).scrollTop() - $(window).height())
+                }, 1000);
+            });
+            $(".next_que").click(function() {
+                $('html, body').animate({
+                    scrollTop: ($(window).scrollTop() + $(window).height())
+                }, 1000);
+            });
+
+            $(".send").click(function() {
+                $('html, body').animate({
+                    scrollTop: ($(window).scrollTop() + $(window).height())
+                }, 1000);
+            });
+            //                
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        const ques1 = [0, 0, 0, 0];
+
+        function setValue1(i, value) {
+            ques1[i - 1] = value
+            console.log("1:", ques1)
+        }
+
+        const ques2 = [0, 0, 0, 0];
+
+
+        function setValue2(i, value) {
+            ques2[i - 1] = value
+            console.log("2:", ques2)
+        }
+        const ques3 = [0, 0, 0, 0];
+
+        function setValue3(i, value) {
+            ques3[i - 1] = value
+            console.log("3:", ques3)
+        }
+
+
+        const ques4 = [0, 0, 0, 0];
+
+        function setValue4(i, value) {
+            ques4[i - 1] = value
+            console.log("4:", ques4)
+        }
+
+
+        const ques5 = [0, 0, 0, 0];
+
+        function setValue5(i, value) {
+            ques5[i - 1] = value
+            console.log("5:", ques5)
+        }
+
+
+
+
+
+        function cal() {
+
+            let scores = Array.from(new Array(5));
+
+            scores.forEach((ele, i, arr) => {
+                arr[i] = eval(`ques${i + 1}`).reduce((acc, val) => {
+                return acc + val
+            }, 0)
+            })
+
+            chart.data.datasets[0].data = [...scores];
+            chart.update()
+
+
+        }
+
+
+//        const ans1 = 
+//        const ans2 =
+        
+    </script>
+
+    <div class="question_end">
+        <div class="result">
+            <!--
+            <div style="width: 250px; height: auto; top: 354px;position: absolute;left: 62px;">
+            </div>
+-->
+            <canvas id="chart"></canvas>
+
+            <script type="text/javascript">
+                Chart.defaults.global.legend.display = false;
+                Chart.defaults.global.defaultFontFamily = "Microsoft JhengHei";
+                Chart.defaults.global.defaultFontColor = '#1D2975';
+                Chart.defaults.global.defaultFontSize = 20;
+                var ctx = document.getElementById('chart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["教育", "媒體", "同儕", "社群", "家庭", ], //1媒體、2教育、3同儕、4社群、5家庭
+                        datasets: [{
+                            label: '',
+                            data: [ques2, ques1, ques3, ques4, ques5, ],
+                            backgroundColor: [
+                                '#edbebe',
+                                '#fce5c8',
+                                '#e6c675',
+                                '#b9dce3',
+                                '#4a397c',
+                            ],
+                        }, ]
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+
+                    }
+                });
+
+            </script>
+        </div>
+        <div class="checkout">
+            <a href=index.html> <img src="pic/others/end.png" width="100%" height="auto" alt=""></a>
+
+        </div>
+    </div>
+
+
+
+    <!--    </div>-->
+</body>
+
+</html>
